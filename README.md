@@ -1,6 +1,6 @@
 # simple_flutter_app
 
-A new Flutter project.
+A new Flutter project. PR title test
 
 ## Getting Started
 
