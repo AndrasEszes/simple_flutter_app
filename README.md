@@ -1,6 +1,6 @@
 # simple_flutter_app
 
-A new Flutter project. Demo 2
+A new Flutter project. Demo 3
 
 ## Getting Started
 
