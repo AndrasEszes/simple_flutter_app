@@ -10,14 +10,14 @@ import 'support/attachments.dart';
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
-    await attachScreenshot(tester, 'smoke_start');
+    await attachScreenshot(tester, '1_start');
 
     expect(find.text('0'), findsOneWidget);
     expect(find.text('1'), findsNothing);
 
     await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
-    await attachScreenshot(tester, 'smoke_after_tap');
+    await attachScreenshot(tester, '2_after_tap');
 
     expect(find.text('0'), findsNothing);
     expect(find.text('1'), findsOneWidget);
@@ -28,8 +28,8 @@ void main() {
       await tester.pumpWidget(const MyApp());
       await tester.tap(find.byIcon(Icons.add));
       await tester.pump();
-      await attachScreenshot(tester, 'counter_failure');
-      attachFile('build/logs/counter_failure.txt', utf8.encode('Counter after one tap: 1, expected: 2\n'));
+      await attachScreenshot(tester, 'failure');
+      attach(utf8.encode('Counter after one tap: 1, expected: 2\n'), 'log', extension: 'txt');
 
       expect(find.text('2'), findsOneWidget);
     });
